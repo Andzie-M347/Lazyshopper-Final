@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+@charset "UTF-8";
+
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/animations';
+
+// 2. Base stuff
+@import
+  'base/base',
+  'base/reset',
+  'base/typography';
+
+// 3. Layout-related sections
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/sidebar',
+  'layout/grid',
+  'layout/forms',
+  'layout/footer';
+
+  // 4. Components
+@import
+'components/buttons',
+'components/container';
+
+
+// 5. Page-specific styles
+@import
+  'pages/home',
+  'pages/shop';

@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Copy text color
+/// @type Color
+$accent-color: #f9a629;
+$text-color-light: rgba(102, 102, 102, 0.85);
+$text-color-dark: #555;
+$white: #fff;
+$light-grey: #eee;
+
+
+/// Breakpoints map
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https:lazyshopper.co.za/assets/';
+$base-url: '/assets/' !default;

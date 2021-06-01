@@ -1,0 +1,24 @@
+{
+
+  "scripts": {
+
+    "sass": "node-sass assets/sass/main.scss assets/css/main.css -watch"
+
+  },
+
+  "devDependencies": {
+
+    "node-sass": "^6.0.0"
+
+  },
+
+  "dependencies": {
+
+    "bootstrap": "^5.0.1",
+
+    "tiny-slider": "^2.9.3"
+
+  }
+
+}
+

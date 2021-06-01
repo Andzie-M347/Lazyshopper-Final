@@ -1,0 +1,171 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -
+
+
+.site-footer {
+
+    input[type=text],
+    input[type=email] {
+        box-sizing: border-box;
+
+        padding: 0 .75em;
+        height: 2.507em;
+        font-size: .97em;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        vertical-align: middle;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.09);
+        color: $white;
+        border-radius: 5px;
+
+        &::placeholder {
+            color: $white !important;
+        }
+
+
+    }
+
+    &__main {
+
+        display: grid;
+        background-color: #777;
+        padding: 3.5rem 5rem;
+        color: $light-grey;
+
+        .content {
+
+            padding: 0 1.5rem;
+
+            &__title {
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            &__tags {
+                font-size: 0.8em !important;
+                display: inline-block;
+                border: 1px solid currentColor;
+                opacity: .8;
+                margin: 0 3px 5px 0;
+                padding: 2px 5px;
+                border-radius: 3px;
+                color: $light-grey;
+
+                &:hover,
+                &:active {
+                    background-color: $accent-color;
+                    border-color: $accent-color;
+                }
+            }
+
+            &__social-media {
+                display: inline;
+
+                &--icon {
+                    height: 3.25rem;
+                    width: 3.25rem;
+                    display: inline-block;
+                    line-height: 3.25rem;
+                    border: 2px solid $light-grey;
+                    border-radius: 50%;
+                    text-align: center;
+                    // margin: 0 .2rem;
+
+
+                    svg {
+                        fill: $light-grey;
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    &__copyrights {
+        background-color: #5B5B5B;
+        padding: 1rem 0 1.5rem;
+        color: $light-grey;
+
+
+        &--payment-methods {
+            .payment-icon {
+                display: inline-block !important;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: inline-block;
+                opacity: .6;
+                transition: opacity .3s;
+                border-radius: 5px;
+                padding-bottom: 0;
+                padding: 3px 5px 5px;
+                margin: 3px 3px 0;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+
+            svg {
+                height: 2rem;
+                width: auto;
+                fill: $white;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+// SCROLL TO TOP
+.scroll-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: block;
+    padding: 8px 4px;
+    cursor: pointer;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.3s;
+    border: 2px solid $text-color-light;
+    background-color: transparent;
+    min-width: 3.85rem;
+    border-radius: 5px;
+
+    &:hover {
+        background: $accent-color;
+        border-color: $accent-color;
+
+        svg {
+            fill: $white !important;
+        }
+    }
+
+
+
+    svg {
+        height: 16px;
+        width: 16px;
+        fill: $text-color-light;
+
+
+    }
+
+}
+
+.showScrollBtn {
+    transform: translateY(0);
+    opacity: 1;
+}

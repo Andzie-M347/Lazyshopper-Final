@@ -1,0 +1,67 @@
+.newsletter {
+  z-index: 999;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,.2);
+
+  .close-btn {
+      position: absolute;
+      right: 1.3rem;
+      top: .7rem;
+  }
+
+  &__form {
+      display: flex;
+      position: relative;
+      width: 55rem;
+      min-height: 40rem;
+
+      &--banner {
+          flex: 0 0 43%;
+        background: url(../img/sale-large.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+          background-position: right;
+      }
+
+      &--content {
+          background-color: $white;
+          flex: 1;
+          padding: 4.5rem 3rem;
+
+          p {
+              margin-top: 1.3rem;
+          }
+
+          form {
+              margin-top: 4rem;
+          }
+      }
+  }
+
+}
+
+
+input {
+    background-color: $light-grey;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    border-width: 0;
+    border-radius: 0;
+    color: #999;
+    font-size: 1.4rem;
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+}
+
+.form-position {
+    position:  fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+}

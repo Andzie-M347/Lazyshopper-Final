@@ -1,0 +1,30 @@
+
+@keyframes pattern {
+
+    100% {
+        background-position: -300px 1000px, 400px 400px, 300px 300px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+   
+}
+
+
+@keyframes spin {
+    0% {
+       transform: perspective(0) rotateY(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(0) rotateY(-20deg);
+    }
+    70% {
+       transform: perspective(0) rotateY(20deg);
+    }
+    100% {
+       transform: perspective(0) rotateY(0deg);
+       opacity: 1;
+    }
+ }

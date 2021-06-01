@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+// SITE RESET
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: $text-color-light;
+    box-sizing: border-box;
+}
+
+
+/**
+ * Basic styles for links
+ */
+a {
+    color: $accent-color;
+    text-decoration: none;
+    color: $text-color-light;
+    text-decoration: none;
+}
+
+// Slider Reset
+.tns-nav {
+    display: none !important;
+}
+
+
+// Overlay 
+
+.search-feature {
+    &__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .65;
+        z-index: 99999999;
+    }
+}

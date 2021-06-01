@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// 
+
+// BANNER SECTION
+.banner-section {
+    // padding-top: 500px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)),
+        url(../img/sale-large.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    position: relative;
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    // Content
+    .flip-text {
+        animation-name: spin;
+        animation-duration: 1500ms;
+        animation-iteration-count: 1s;
+        animation-timing-function: linear;
+        backface-visibility: hidden;
+        animation-fill-mode: both;
+
+
+        &__alt-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        &__title {
+            color: $accent-color;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 15px 0;
+            letter-spacing: .05rem;
+
+            &--large {
+                font-size: 9rem;
+                line-height: 9rem;
+                display: block;
+                margin-bottom: 1.1rem;
+            }
+
+            &--small {
+                font-size: 5.6rem;
+                line-height: 5.6rem;
+                margin-bottom: 1.1rem;
+            }
+        }
+
+
+        &__shopping-options {
+            margin-top: 3rem;
+        }
+
+
+
+    }
+
+
+    &__patterns {
+        background-image: url("../img/pattern1.png"),
+            url("../img/pattern2.png");
+        animation: pattern 10s linear infinite;
+        height: 50rem;
+        // position: relative;
+        top: 0;
+        left: 0;
+
+    }
+}
+
+
+.site-header.fixed {
+    position: fixed;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
+    animation: stuckMoveDown .6s;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.973);
+    z-index: 999;
+
+
+}
+
+@keyframes stuckMoveDown {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}

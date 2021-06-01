@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@keyframes pattern {
+  100% {
+    background-position: -300px 1000px, 400px 400px, 300px 300px; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px; } }
+
+@keyframes spin {
+  0% {
+    transform: perspective(0) rotateY(90deg);
+    opacity: 0; }
+  40% {
+    transform: perspective(0) rotateY(-20deg); }
+  70% {
+    transform: perspective(0) rotateY(20deg); }
+  100% {
+    transform: perspective(0) rotateY(0deg);
+    opacity: 1; } }
+
+/**
+ * Set up a decent box model on the root element
+ */
+/* line 10, assets/sass/base/_base.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+/* line 20, assets/sass/base/_base.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 25, assets/sass/base/_base.scss */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(102, 102, 102, 0.85);
+  box-sizing: border-box; }
+
+/**
+ * Basic styles for links
+ */
+/* line 36, assets/sass/base/_base.scss */
+a {
+  color: #f9a629;
+  text-decoration: none;
+  color: rgba(102, 102, 102, 0.85);
+  text-decoration: none; }
+
+/* line 44, assets/sass/base/_base.scss */
+.tns-nav {
+  display: none !important; }
+
+/* line 52, assets/sass/base/_base.scss */
+.search-feature__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .65;
+  z-index: 99999999; }
+
+/* line 1, assets/sass/base/_reset.scss */
+.newsletter {
+  visibility: hidden; }
+
+/* line 5, assets/sass/base/_reset.scss */
+.active {
+  visibility: visible;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.732);
+  z-index: 999;
+  width: 100%;
+  transition: all .2s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+/* line 6, assets/sass/layout/_header.scss */
+.banner-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/sale-large.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: relative; }
+  /* line 16, assets/sass/layout/_header.scss */
+  .banner-section .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  /* line 25, assets/sass/layout/_header.scss */
+  .banner-section .flip-text {
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1s;
+    animation-timing-function: linear;
+    backface-visibility: hidden;
+    animation-fill-mode: both; }
+    /* line 34, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__alt-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      color: #fff;
+      font-weight: 400; }
+    /* line 42, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__title {
+      color: #f9a629;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 15px 0;
+      letter-spacing: .05rem; }
+      /* line 49, assets/sass/layout/_header.scss */
+      .banner-section .flip-text__title--large {
+        font-size: 9rem;
+        line-height: 9rem;
+        display: block;
+        margin-bottom: 1.1rem; }
+      /* line 56, assets/sass/layout/_header.scss */
+      .banner-section .flip-text__title--small {
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        margin-bottom: 1.1rem; }
+    /* line 64, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__shopping-options {
+      margin-top: 3rem; }
+  /* line 73, assets/sass/layout/_header.scss */
+  .banner-section__patterns {
+    background-image: url("../img/pattern1.png"), url("../img/pattern2.png");
+    animation: pattern 10s linear infinite;
+    height: 50rem;
+    top: 0;
+    left: 0; }
+
+/* line 86, assets/sass/layout/_header.scss */
+.site-header.fixed {
+  position: fixed;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  animation: stuckMoveDown .6s;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.973);
+  z-index: 999; }
+
+@keyframes stuckMoveDown {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+
+/* line 1, assets/sass/layout/_navigation.scss */
+.site-header {
+  height: 8.4rem; }
+  /* line 4, assets/sass/layout/_navigation.scss */
+  .site-header #lightbox {
+    background: #f9a629;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block; }
+    /* line 15, assets/sass/layout/_navigation.scss */
+    .site-header #lightbox svg {
+      fill: #fff;
+      margin: .5rem; }
+  /* line 22, assets/sass/layout/_navigation.scss */
+  .site-header li {
+    display: inline-block;
+    padding: 0 1.5rem; }
+    /* line 29, assets/sass/layout/_navigation.scss */
+    .site-header li svg {
+      height: 2rem;
+      width: 2rem; }
+  /* line 35, assets/sass/layout/_navigation.scss */
+  .site-header .site-navigation {
+    display: flex;
+    align-items: center; }
+    /* line 39, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation__logo {
+      margin-right: 3rem; }
+    /* line 43, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation__menu {
+      flex: 1; }
+    /* line 47, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation a,
+    .site-header .site-navigation .dropdown-button {
+      transition: all .2s;
+      color: rgba(102, 102, 102, 0.85);
+      font-weight: 600;
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      cursor: pointer; }
+  /* line 59, assets/sass/layout/_navigation.scss */
+  .site-header .site-user li {
+    padding: 0 .7rem; }
+  /* line 65, assets/sass/layout/_navigation.scss */
+  .site-header .site-user__link--icon {
+    margin-right: .8rem;
+    fill: rgba(102, 102, 102, 0.85); }
+  /* line 73, assets/sass/layout/_navigation.scss */
+  .site-header .site-user .dropdown svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: rgba(102, 102, 102, 0.85); }
+
+/* line 86, assets/sass/layout/_navigation.scss */
+.dropdown-button {
+  position: relative; }
+  /* line 90, assets/sass/layout/_navigation.scss */
+  .dropdown-button.open .dropdown-button__list {
+    display: flex; }
+  /* line 95, assets/sass/layout/_navigation.scss */
+  .dropdown-button__list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 0.75rem;
+    position: absolute;
+    background-color: #fff;
+    min-width: 15rem;
+    right: 0;
+    display: none;
+    margin-top: 3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 999; }
+    /* line 111, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list .login-btn {
+      background-color: #f9a629;
+      color: #fff !important;
+      border-radius: 59rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 9px 8px rgba(0, 0, 0, 0.03), 0 5px 2px rgba(0, 0, 0, 0.02); }
+      /* line 120, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list .login-btn:hover, .dropdown-button__list .login-btn:active {
+        background-color: #f9a526; }
+      /* line 125, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list .login-btn--inverse {
+        color: #f9a629 !important;
+        text-align: center; }
+        /* line 129, assets/sass/layout/_navigation.scss */
+        .dropdown-button__list .login-btn--inverse:hover, .dropdown-button__list .login-btn--inverse:active {
+          background-color: rgba(249, 166, 41, 0.5);
+          border-radius: 59rem; }
+    /* line 138, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list span {
+      text-align: center; }
+    /* line 143, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list a {
+      padding: .75rem;
+      font-size: 1.25rem !important;
+      text-transform: capitalize !important;
+      font-weight: 400 !important; }
+      /* line 150, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list a:hover, .dropdown-button__list a:active {
+        background-color: #eee; }
+
+/* line 1, assets/sass/layout/_forms.scss */
+.newsletter {
+  z-index: 999;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2); }
+  /* line 5, assets/sass/layout/_forms.scss */
+  .newsletter .close-btn {
+    position: absolute;
+    right: 1.3rem;
+    top: .7rem; }
+  /* line 11, assets/sass/layout/_forms.scss */
+  .newsletter__form {
+    display: flex;
+    position: relative;
+    width: 55rem;
+    min-height: 40rem; }
+    /* line 17, assets/sass/layout/_forms.scss */
+    .newsletter__form--banner {
+      flex: 0 0 43%;
+      background: url(../img/sale-large.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right; }
+    /* line 25, assets/sass/layout/_forms.scss */
+    .newsletter__form--content {
+      background-color: #fff;
+      flex: 1;
+      padding: 4.5rem 3rem; }
+      /* line 30, assets/sass/layout/_forms.scss */
+      .newsletter__form--content p {
+        margin-top: 1.3rem; }
+      /* line 34, assets/sass/layout/_forms.scss */
+      .newsletter__form--content form {
+        margin-top: 4rem; }
+
+/* line 43, assets/sass/layout/_forms.scss */
+input {
+  background-color: #eee;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  border-width: 0;
+  border-radius: 0;
+  color: #999;
+  font-size: 1.4rem;
+  padding: 1.6rem;
+  margin-bottom: 2rem; }
+  /* line 55, assets/sass/layout/_forms.scss */
+  input:focus {
+    outline: none;
+    border: none; }
+
+/* line 62, assets/sass/layout/_forms.scss */
+.form-position {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+/* line 8, assets/sass/layout/_footer.scss */
+.site-footer input[type=text],
+.site-footer input[type=email] {
+  box-sizing: border-box;
+  padding: 0 .75em;
+  height: 2.507em;
+  font-size: .97em;
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  border-radius: 5px; }
+  /* line 24, assets/sass/layout/_footer.scss */
+  .site-footer input[type=text]::placeholder,
+  .site-footer input[type=email]::placeholder {
+    color: #fff !important; }
+
+/* line 31, assets/sass/layout/_footer.scss */
+.site-footer__main {
+  display: grid;
+  background-color: #777;
+  padding: 3.5rem 5rem;
+  color: #eee; }
+  /* line 38, assets/sass/layout/_footer.scss */
+  .site-footer__main .content {
+    padding: 0 1.5rem; }
+    /* line 42, assets/sass/layout/_footer.scss */
+    .site-footer__main .content__title {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem; }
+    /* line 48, assets/sass/layout/_footer.scss */
+    .site-footer__main .content__tags {
+      font-size: 0.8em !important;
+      display: inline-block;
+      border: 1px solid currentColor;
+      opacity: .8;
+      margin: 0 3px 5px 0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      color: #eee; }
+      /* line 58, assets/sass/layout/_footer.scss */
+      .site-footer__main .content__tags:hover, .site-footer__main .content__tags:active {
+        background-color: #f9a629;
+        border-color: #f9a629; }
+    /* line 65, assets/sass/layout/_footer.scss */
+    .site-footer__main .content__social-media {
+      display: inline; }
+      /* line 68, assets/sass/layout/_footer.scss */
+      .site-footer__main .content__social-media--icon {
+        height: 3.25rem;
+        width: 3.25rem;
+        display: inline-block;
+        line-height: 3.25rem;
+        border: 2px solid #eee;
+        border-radius: 50%;
+        text-align: center; }
+        /* line 79, assets/sass/layout/_footer.scss */
+        .site-footer__main .content__social-media--icon svg {
+          fill: #eee;
+          height: 2rem;
+          width: 2rem; }
+
+/* line 91, assets/sass/layout/_footer.scss */
+.site-footer__copyrights {
+  background-color: #5B5B5B;
+  padding: 1rem 0 1.5rem;
+  color: #eee; }
+  /* line 98, assets/sass/layout/_footer.scss */
+  .site-footer__copyrights--payment-methods .payment-icon {
+    display: inline-block !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    opacity: .6;
+    transition: opacity .3s;
+    border-radius: 5px;
+    padding-bottom: 0;
+    padding: 3px 5px 5px;
+    margin: 3px 3px 0; }
+    /* line 109, assets/sass/layout/_footer.scss */
+    .site-footer__copyrights--payment-methods .payment-icon:hover {
+      opacity: 1; }
+  /* line 115, assets/sass/layout/_footer.scss */
+  .site-footer__copyrights--payment-methods svg {
+    height: 2rem;
+    width: auto;
+    fill: #fff;
+    vertical-align: middle; }
+
+/* line 124, assets/sass/layout/_footer.scss */
+.site-footer .container {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 132, assets/sass/layout/_footer.scss */
+.scroll-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: block;
+  padding: 8px 4px;
+  cursor: pointer;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+  border: 2px solid rgba(102, 102, 102, 0.85);
+  background-color: transparent;
+  min-width: 3.85rem;
+  border-radius: 5px; }
+  /* line 147, assets/sass/layout/_footer.scss */
+  .scroll-top:hover {
+    background: #f9a629;
+    border-color: #f9a629; }
+    /* line 151, assets/sass/layout/_footer.scss */
+    .scroll-top:hover svg {
+      fill: #fff !important; }
+  /* line 158, assets/sass/layout/_footer.scss */
+  .scroll-top svg {
+    height: 16px;
+    width: 16px;
+    fill: rgba(102, 102, 102, 0.85); }
+
+/* line 168, assets/sass/layout/_footer.scss */
+.showScrollBtn {
+  transform: translateY(0);
+  opacity: 1; }
+
+/* line 1, assets/sass/components/_buttons.scss */
+.pr-fill {
+  background-color: #f9a629;
+  border: 2px solid #f9a629;
+  padding: .7rem 2rem; }
+
+/* line 8, assets/sass/components/_buttons.scss */
+.lzs-button {
+  padding: .6rem 3rem;
+  border-radius: 5px;
+  border: 1px solid;
+  text-transform: capitalize; }
+  /* line 14, assets/sass/components/_buttons.scss */
+  .lzs-button__primary {
+    border-color: #f9a629;
+    background-color: #f9a629;
+    color: #fff; }
+  /* line 19, assets/sass/components/_buttons.scss */
+  .lzs-button__wt-outline {
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    margin-top: .76rem;
+    transition: all .2s ease; }
+    /* line 22, assets/sass/components/_buttons.scss */
+    .lzs-button__wt-outline:not(:last-child) {
+      margin-right: 1.52rem; }
+    /* line 29, assets/sass/components/_buttons.scss */
+    .lzs-button__wt-outline:hover, .lzs-button__wt-outline:active {
+      background: #fff;
+      color: rgba(102, 102, 102, 0.85); }
+
+/* line 1, assets/sass/components/_container.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media (min-width: 992px) {
+  /* line 11, assets/sass/components/_container.scss */
+  .container {
+    max-width: 1080px; } }
+
+/* line 1, assets/sass/pages/_home.scss */
+.intro-section {
+  margin-top: 3rem; }
+
+/* line 7, assets/sass/pages/_home.scss */
+.banner-layers {
+  text-align: center;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9a629; }
+  /* line 15, assets/sass/pages/_home.scss */
+  .banner-layers__link {
+    color: #fff;
+    text-transform: uppercase; }
+
+/* line 25, assets/sass/pages/_home.scss */
+.weekly-products .container {
+  position: relative; }
+  /* line 29, assets/sass/pages/_home.scss */
+  .weekly-products .container .tns-controls button {
+    width: 30px;
+    height: 3rem;
+    background-color: #fff;
+    margin: 0 !important;
+    background-color: #555;
+    border: none;
+    outline: none;
+    color: #f9a629;
+    z-index: 99;
+    transform: translateY(-50%); }
+    /* line 42, assets/sass/pages/_home.scss */
+    .weekly-products .container .tns-controls button:first-of-type {
+      position: absolute;
+      left: 0;
+      top: 50%; }
+    /* line 48, assets/sass/pages/_home.scss */
+    .weekly-products .container .tns-controls button:last-of-type {
+      position: absolute;
+      right: 0;
+      top: 50%; }
+
+/* line 57, assets/sass/pages/_home.scss */
+.weekly-products,
+.best-selling {
+  padding: 2rem 0; }
+  /* line 61, assets/sass/pages/_home.scss */
+  .weekly-products__title,
+  .best-selling__title {
+    text-transform: uppercase;
+    color: #555;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    line-height: 0.1em;
+    margin: 1rem 0 2rem; }
+    /* line 70, assets/sass/pages/_home.scss */
+    .weekly-products__title span,
+    .best-selling__title span {
+      background: #fff;
+      padding: 0 1rem; }
+  /* line 78, assets/sass/pages/_home.scss */
+  .weekly-products .product,
+  .best-selling .product {
+    margin-top: 3rem; }
+    /* line 81, assets/sass/pages/_home.scss */
+    .weekly-products .product__figure,
+    .best-selling .product__figure {
+      position: relative; }
+      /* line 84, assets/sass/pages/_home.scss */
+      .weekly-products .product__figure img,
+      .best-selling .product__figure img {
+        border: 3px solid #ccc !important; }
+    /* line 92, assets/sass/pages/_home.scss */
+    .weekly-products .product__caption--wishlist,
+    .best-selling .product__caption--wishlist {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      border: 2px solid #eee;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      text-align: center;
+      padding-top: 3px;
+      opacity: 0;
+      transition: all .2s ease; }
+      /* line 106, assets/sass/pages/_home.scss */
+      .weekly-products .product__caption--wishlist svg,
+      .best-selling .product__caption--wishlist svg {
+        fill: #eee;
+        height: 2rem;
+        width: 2rem; }
+    /* line 113, assets/sass/pages/_home.scss */
+    .weekly-products .product__caption--quick-view,
+    .best-selling .product__caption--quick-view {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: .4em 0 .5em;
+      font-weight: 700;
+      background-color: #f9a629;
+      width: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .3s ease;
+      overflow: hidden; }
+    /* line 135, assets/sass/pages/_home.scss */
+    .weekly-products .product__title--cat,
+    .best-selling .product__title--cat {
+      opacity: .7;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      letter-spacing: .05em; }
+    /* line 142, assets/sass/pages/_home.scss */
+    .weekly-products .product__title--name,
+    .best-selling .product__title--name {
+      font-size: 1.4rem; }
+    /* line 146, assets/sass/pages/_home.scss */
+    .weekly-products .product__title--price,
+    .best-selling .product__title--price {
+      color: #000; }
+    /* line 158, assets/sass/pages/_home.scss */
+    .weekly-products .product:hover .product__caption--wishlist,
+    .best-selling .product:hover .product__caption--wishlist {
+      opacity: 1; }
+    /* line 162, assets/sass/pages/_home.scss */
+    .weekly-products .product:hover .product__caption--quick-view,
+    .best-selling .product:hover .product__caption--quick-view {
+      opacity: 1; }
+
+/* line 174, assets/sass/pages/_home.scss */
+.call-to-action {
+  margin: 3rem 0;
+  padding-bottom: 2rem; }
+  /* line 180, assets/sass/pages/_home.scss */
+  .call-to-action .categories__clothing, .call-to-action .categories__personal-care {
+    min-height: 25rem;
+    position: relative; }
+  /* line 187, assets/sass/pages/_home.scss */
+  .call-to-action .categories__clothing {
+    background: url(../img/clothing.jpg);
+    background-size: cover;
+    position: relative; }
+    /* line 194, assets/sass/pages/_home.scss */
+    .call-to-action .categories__clothing .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 203, assets/sass/pages/_home.scss */
+  .call-to-action .categories__personal-care {
+    background: url(../img/personal-care.jpg);
+    background-size: cover;
+    position: relative; }
+    /* line 210, assets/sass/pages/_home.scss */
+    .call-to-action .categories__personal-care .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 218, assets/sass/pages/_home.scss */
+  .call-to-action .categories__decorative-lights {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/decorative-lights.jpg);
+    min-height: 51rem;
+    background-size: cover;
+    position: relative; }
+    /* line 226, assets/sass/pages/_home.scss */
+    .call-to-action .categories__decorative-lights .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 234, assets/sass/pages/_home.scss */
+  .call-to-action .categories__title {
+    padding: .45rem 2.75rem;
+    background-color: #f9a629;
+    color: #fff;
+    border-radius: 6rem;
+    text-transform: capitalize;
+    font-weight: 500; }
+
+/* line 249, assets/sass/pages/_home.scss */
+.bestselling-products {
+  margin: 3rem 0; }

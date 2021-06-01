@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@mixin button ($border, $background, $text-color) {
+    border-color: $border;
+    background-color: $background;
+    color: $text-color;
+
+}
+
+
+@mixin buttons ($primary: true) {
+
+    @if $primary {
+        @include button ($accent-color, $accent-color, $white);
+    }
+
+    @else {
+        @include button ($white, transparent, $white);
+    }
+
+}
+
+@mixin positioning ($vertical, $horizontal) {
+    left: $horizontal;
+    top: $vertical;
+    right: $horizontal;
+    bottom: $vertical;
+}

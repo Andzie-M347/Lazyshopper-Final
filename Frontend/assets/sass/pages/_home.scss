@@ -1,0 +1,251 @@
+.intro-section {
+    margin-top: 3rem;
+}
+
+
+// INTRO SECTION
+.banner-layers {
+    text-align: center;
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accent-color;
+
+    &__link {
+        color: $white;
+        text-transform: uppercase;
+        // line-height: 16rem;
+    }
+}
+
+
+// WEEKLY PRODUCTS
+
+.weekly-products .container {
+    position: relative;
+
+    .tns-controls {
+        button {
+            width: 30px;
+            height: 3rem;
+            background-color: #fff;
+            // box-shadow: 0 -150px 15px 0 rgba(0 0 0 / 30%);
+            margin: 0 !important;
+            background-color: $text-color-dark;
+            border: none;
+            outline: none;
+            color: $accent-color;
+            z-index: 99;
+            transform: translateY(-50%);
+
+            &:first-of-type {
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
+
+            &:last-of-type {
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+        }
+    }
+}
+
+.weekly-products,
+.best-selling {
+    padding: 2rem 0;
+
+    &__title {
+        text-transform: uppercase;
+        color: $text-color-dark;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid $light-grey;
+        line-height: 0.1em;
+        margin: 1rem 0 2rem;
+
+        span {
+            background: $white;
+            padding: 0 1rem;
+        }
+    }
+
+
+
+    .product {
+        margin-top: 3rem;
+
+        &__figure {
+            position: relative;
+
+            img {
+                border: 3px solid #ccc !important;
+            }
+        }
+
+        &__caption {
+
+
+            &--wishlist {
+                position: absolute;
+                top: 1.25rem;
+                right: 1.25rem;
+                border: 2px solid $light-grey;
+                border-radius: 50%;
+                height: 3rem;
+                width: 3rem;
+                text-align: center;
+                padding-top: 3px;
+                opacity: 0;
+                transition: all .2s ease;
+
+
+                svg {
+                    fill: $light-grey;
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            &--quick-view {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: .4em 0 .5em;
+                font-weight: 700;
+                background-color: $accent-color;
+                width: 100%;
+                color: $white;
+                text-transform: uppercase;
+                text-align: center;
+                opacity: 0;
+                transition: opacity .3s ease;
+                overflow: hidden;
+
+            }
+        }
+
+
+
+
+        &__title {
+            &--cat {
+                opacity: .7;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                letter-spacing: .05em;
+            }
+
+            &--name {
+                font-size: 1.4rem;
+            }
+
+            &--price {
+                color: #000;
+            }
+        }
+
+
+
+
+
+
+        &:hover .product__caption {
+
+            &--wishlist {
+                opacity: 1;
+            }
+
+            &--quick-view {
+                opacity: 1;
+
+            }
+
+
+        }
+    }
+}
+
+
+// TOP CATEGORIES
+.call-to-action {
+    margin: 3rem 0;
+    padding-bottom: 2rem;
+
+    .categories {
+
+        &__clothing,
+        &__personal-care {
+            min-height: 25rem;
+            // background-size: cover;
+            position: relative;
+        }
+
+        &__clothing {
+            background: url(../img/clothing.jpg);
+            background-size: cover;
+
+            position: relative;
+
+            .categories {
+                &__title {
+                    position: absolute;
+                    left: 3rem;
+                    top: 3rem;
+                }
+            }
+
+        }
+
+        &__personal-care {
+            background: url(../img/personal-care.jpg);
+            background-size: cover;
+
+            position: relative;
+
+            .categories {
+                &__title {
+                    position: absolute;
+                    left: 3rem;
+                    top: 3rem;
+                }
+            }
+        }
+
+        &__decorative-lights {
+            background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(../img/decorative-lights.jpg);
+            min-height: 51rem;
+            background-size: cover;
+            position: relative;
+
+
+            .categories {
+                &__title {
+                    position: absolute;
+                    left: 3rem;
+                    top: 3rem;
+                }
+            }
+        }
+
+        &__title {
+            padding: .45rem 2.75rem;
+            background-color: $accent-color;
+            color: $white;
+            border-radius: 6rem;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+
+
+    }
+}
+
+
+// BEST SELLING
+.bestselling-products {
+    margin: 3rem 0;
+}
