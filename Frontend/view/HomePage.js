@@ -17,7 +17,7 @@ const HomePage = {
                  <div class="col-md-3">
                  <div class="product">
                         <figure class="product__figure">
-                            <a href="/#/product/${product.name}">
+                            <a href="/product/${product.name}">
                                 <img src="${product.image}" alt="${product.name}" class="img-fluid">
                             </a>
 
