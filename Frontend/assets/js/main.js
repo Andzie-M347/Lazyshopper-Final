@@ -17,71 +17,71 @@
 
 
 // Copyrights 
-let copyrightDate = document.querySelector('#copyright')
-copyrightDate.appendChild(document.createTextNode(new Date().getFullYear()))
+// let copyrightDate = document.querySelector('#copyright')
+// copyrightDate.appendChild(document.createTextNode(new Date().getFullYear()))
 
 
-var slider = tns({
-    "responsive": {
-        "1080": {
-            "items": 4,
-            "controls": true,
+// var slider = tns({
+//     "responsive": {
+//         "1080": {
+//             "items": 4,
+//             "controls": true,
         
-        },
-        "500": {
-            "items": 2
-        }
-    },
+//         },
+//         "500": {
+//             "items": 2
+//         }
+//     },
 
-    container: '.my-slider',
-    slideBy: 'page',
-    controls: true,
-    mouseDrag: true,
-    swipeAngle: false,
-    gutter: 10
+//     container: '.my-slider',
+//     slideBy: 'page',
+//     controls: true,
+//     mouseDrag: true,
+//     swipeAngle: false,
+//     gutter: 10
 
-});
+// });
 
 
 // 
 
-let prev = document.body.querySelector('[data-controls=prev]')
-prev.innerHTML = `&larr;`
+// let prev = document.body.querySelector('[data-controls=prev]')
+// prev.innerHTML = `&larr;`
 
-let next = document.body.querySelector('[data-controls=next]')
-next.innerHTML = `&rarr;`
+// let next = document.body.querySelector('[data-controls=next]')
+// next.innerHTML = `&rarr;`
 
 // Sticky Header 
-window.addEventListener('scroll', function() {
-    var header = document.querySelector('.site-header')
-    header.classList.toggle('fixed', window.scrollY > 0)
-})
+// window.addEventListener('scroll', function() {
+//     var header = document.querySelector('.site-header')
+//     header.classList.toggle('fixed', window.scrollY > 0)
+// })
 
 // Scroll to top
-document.addEventListener("scroll", handleScroll);
-var scrollToTopBtn = document.querySelector(".scroll-top");
+// document.addEventListener("scroll", handleScroll);
+// var scrollToTopBtn = document.querySelector(".scroll-top");
 
-function handleScroll() {
-  var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var GOLDEN_RATIO = 0.5;
+// function handleScroll() {
+//   var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var GOLDEN_RATIO = 0.5;
 
-  if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
-    if(!scrollToTopBtn.classList.contains("showScrollBtn"))
-    scrollToTopBtn.classList.add("showScrollBtn")
-  } else {
-    if(scrollToTopBtn.classList.contains("showScrollBtn"))
-    scrollToTopBtn.classList.remove("showScrollBtn")
-  }
-}
+//   if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
+//     if(!scrollToTopBtn.classList.contains("showScrollBtn"))
+//     scrollToTopBtn.classList.add("showScrollBtn")
+//   } else {
+//     if(scrollToTopBtn.classList.contains("showScrollBtn"))
+//     scrollToTopBtn.classList.remove("showScrollBtn")
+//   }
+// }
 
-scrollToTopBtn.addEventListener("click", scrollToTop);
+// scrollToTopBtn.addEventListener("click", scrollToTop);
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+// function scrollToTop() {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth"
+//   });
+// }
 
 
 // Dropdown menu
