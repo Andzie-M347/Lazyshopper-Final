@@ -1,8 +1,8 @@
 const ProductPage = {
     render: () => {
        return 
-       `<div class=""> Product Page </div>` 
-    }
+       `<div> Product Page </div>`;
+    },
 }
 
 

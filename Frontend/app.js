@@ -5,19 +5,15 @@ import ErrorPage from './view/ErrorPage.js';
 
 const routes = {
     "/": HomePage,
-    "/products/:id": ProductPage,
-
+    "/product/:id": ProductPage,
 };
 
 const router = () => {
     const request = parseRequestUrl();
-
-    const parseUrl = (request.resource ? `/${request.resource}` : '/') +
-    (request.id ? '/:id' : '') +
+    const parseUrl = (request.resource ? `/${request.resource}`: '/')+ 
+    (request.id ? '/:id' : '')+ 
     (request.verb ? `/${request.verb}`: '');
-
     const view = routes[parseUrl] ? routes[parseUrl]: ErrorPage; 
-
 
     const main = document.getElementById("main");
     main.innerHTML = view.render();

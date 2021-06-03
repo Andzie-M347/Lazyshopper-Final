@@ -1,4 +1,4 @@
-import data from '../data.js';
+import data from '../../backend/data.js';
 
 
 const HomePage = {
@@ -10,14 +10,13 @@ const HomePage = {
 
         return `
         <section class="weekly-products">
-        <div class="container">
         <div class="row">
             ${products.map ( 
                (product) => `
                  <div class="col-md-3">
                  <div class="product">
                         <figure class="product__figure">
-                            <a href="/product/${product.name}">
+                            <a href="/#/product/${product._id}">
                                 <img src="${product.image}" alt="${product.name}" class="img-fluid">
                             </a>
 
@@ -49,7 +48,6 @@ const HomePage = {
                     
             
             `).join('\n')}
-       </div>
        </div>
        </section>
        `
